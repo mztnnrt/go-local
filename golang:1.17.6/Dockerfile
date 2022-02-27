@@ -1,4 +1,4 @@
-FROM golang:1.17.6-alpine3.15 as build
+FROM golang:1.17.7-alpine3.15 as build
 ARG SERVICE
 
 WORKDIR /go
@@ -13,7 +13,7 @@ RUN echo "install air for live reloading" && \
 #########################################
 # Runner Stage for Local
 #########################################
-FROM golang:1.17.6-alpine3.15 as develop
+FROM golang:1.17.7-alpine3.15 as develop
 ARG SERVICE
 RUN touch /bin/start.sh && apk --no-cache add bash
 
