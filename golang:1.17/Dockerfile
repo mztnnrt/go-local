@@ -20,3 +20,4 @@ RUN touch /bin/start.sh && apk --no-cache add bash
 COPY --from=build /bin/air /bin/air
 COPY --from=build /go/bin/dlv /go/bin/dlv
 
+CMD [ "air" ]
