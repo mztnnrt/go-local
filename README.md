@@ -1,6 +1,6 @@
 ## go-local
 
-Simple docker image for local develop with Go
+Simple docker image for local develop with Go. Image at Docker Hub is Here [mztnnrt/go-local](https://hub.docker.com/repository/docker/mztnnrt/go-local)
 
 ### Usage
 
@@ -27,5 +27,5 @@ services:
       - 8080:8080
     working_dir: /go/src/backend
     volumes:
-      - ./backend:/go/app/backend
+      - ./backend:/go/src/backend
 ```

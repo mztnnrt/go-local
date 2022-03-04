@@ -11,5 +11,6 @@ RUN echo "install air for live reloading" && \
 # --------------------------------
 FROM golang:1.17.8-alpine3.15 as develop
 RUN touch /bin/start.sh && apk --no-cache add bash
+COPY --from=build /bin/air /bin/air
 COPY --from=build /go/bin/dlv /go/bin/dlv
 CMD [ "air" ]
