@@ -1,4 +1,4 @@
-FROM golang:1.17.7-alpine3.15 as build
+FROM golang:1.18rc1-alpine3.15 as build
 WORKDIR /go
 RUN echo "install air for live reloading" && \
     apk --no-cache add curl && \
@@ -9,7 +9,7 @@ RUN echo "install air for live reloading" && \
     go install github.com/go-delve/delve/cmd/dlv@latest
 
 # --------------------------------
-FROM golang:1.17.7-alpine3.15 as develop
+FROM golang:1.18rc1-alpine3.15 as develop
 RUN touch /bin/start.sh && apk --no-cache add bash
 COPY --from=build /bin/air /bin/air
 COPY --from=build /go/bin/dlv /go/bin/dlv
