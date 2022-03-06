@@ -16,22 +16,7 @@ You can volume mount and then you set `working_dir` property directory located `
 └── docker-compose.yaml
 ```
 
-```yaml
-version: "3.8"
-services:
-  backend:
-    container_name: go-app
-    image: mztnnrt/go-local:latest
-    restart: always
-    environment:
-      is_debug: 1
-    ports:
-      - 8080:8080
-      - 2345:2345
-    working_dir: /go/src/backend
-    volumes:
-      - ./backend:/go/src/backend
-```
+https://github.com/mztnnrt/go-local/blob/1ed2b841a0951fc3390e7b0c91ffb2c74ec9c6b2/sample/docker-compose.yaml#L1-L14
 
 ### Quick Start
 

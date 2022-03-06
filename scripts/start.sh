@@ -1,4 +1,5 @@
 #!/bin/bash
+
 isDebugMode() {
     echo $DEBUG_MODE
 }
@@ -9,4 +10,3 @@ if [ "$isDebug" = 'true' ]; then
 else
     echo -e "\n 📹 START LIVE RELOADING\n" && air
 fi
-
