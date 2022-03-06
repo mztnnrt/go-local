@@ -11,4 +11,4 @@ COPY ./scripts/start.sh /bin/start.sh
 RUN  apk --no-cache add bash=5.1.16-r0
 COPY --from=build /go/bin/air /go/bin/air
 COPY --from=build /go/bin/dlv /go/bin/dlv
-CMD [ "air" ]
+CMD [ "/bin/start.sh" ]
