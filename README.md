@@ -29,3 +29,14 @@ services:
     volumes:
       - ./backend:/go/src/backend
 ```
+
+### Quick Start
+
+We prepare sample for quick start, you start below command.
+
+```
+cd sample
+docker compose up
+```
+
+Then you `curl localhost:8080`, you can received response from api server.
