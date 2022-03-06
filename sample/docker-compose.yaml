@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  backend:
+    container_name: go-app
+    image: mztnnrt/go-local:latest
+    restart: always
+    ports:
+      - 8080:8080
+    working_dir: /go/src/backend
+    volumes:
+      - ./backend:/go/src/backend
