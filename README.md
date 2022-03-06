@@ -23,8 +23,11 @@ services:
     container_name: go-app
     image: mztnnrt/go-local:latest
     restart: always
+    environment:
+      is_debug: 1
     ports:
       - 8080:8080
+      - 2345:2345
     working_dir: /go/src/backend
     volumes:
       - ./backend:/go/src/backend
