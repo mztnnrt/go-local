@@ -1,12 +1,12 @@
 # --------------------------------
-FROM golang:1.20-alpine as build
+FROM golang:1.22-alpine as build
 WORKDIR /go
 
 COPY ./scripts/setup.sh /bin/setup.sh
 RUN /bin/setup.sh
 
 # --------------------------------
-FROM golang:1.20-alpine as develop
+FROM golang:1.22-alpine as develop
 COPY ./scripts/start.sh /bin/start.sh
 RUN  apk --no-cache add bash
 COPY --from=build /go/bin/air /go/bin/air
